@@ -1,0 +1,78 @@
+.wrap .content-wrap:not(:last-child) {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.main-tit {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.proposal-group {
+  padding: 40px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.row-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.row-tit {
+  padding: 0 10px 0;
+  min-width: 200px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.canister-item {
+  padding: 5px 10px;
+}
+
+.canister-group .canister-item:not(:first-child) {
+  margin-top: 20px;
+}
+
+.canister-group .canister-item:not(:last-child) {
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+}
+
+.canister-row {
+  display: flex;
+}
+
+.canister-row-tit {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.action-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.action-row button:not(:first-child) {
+  margin-left: 10px;
+}
+
+.vote-btn-row {
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+}
+
+.vote-btn-row .vote-btn:not(:first-child) {
+  margin-left: 20px;
+}
+
+.proposal-item {
+  padding: 20px;
+}
+
+.proposal-group .proposal-item:not(:last-child) {
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+}

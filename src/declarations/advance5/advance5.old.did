@@ -1,0 +1,41 @@
+type Proposal = 
+ record {
+   approvers: List;
+   canisterID: opt principal;
+   done: bool;
+   isApprover: bool;
+   operation: Operations;
+   proposalsID: nat;
+   proposer: principal;
+   refusers: List;
+   wasmCode: opt blob;
+   wasmCodeHash: vec nat8;
+ };
+type Operations = 
+ variant {
+   addRestriction;
+   create;
+   delete;
+   install;
+   removeRestriction;
+   start;
+   stop;
+ };
+type List = 
+ opt record {
+       principal;
+       List;
+     };
+service : {
+  execution: (Operations, opt principal, opt blob) -> ();
+  getAllCanister: () -> (vec principal) query;
+  getFoundation: () -> (vec principal) query;
+  getProposals: () -> (vec Proposal) query;
+  getRestrictionCanister: () -> (vec principal) query;
+  isFoundationMember: () -> (bool) query;
+  joinFoundation: () -> ();
+  propose: (Operations, opt principal, opt blob) -> ();
+  testInstall: (opt principal, opt blob) -> ();
+  vote: (nat, bool) -> ();
+  whoami: () -> (principal) query;
+}
